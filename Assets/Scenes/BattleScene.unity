@@ -153,11 +153,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Character2
-  Hp: 10
   Actions:
   - {fileID: 199069494658646, guid: 151f9e9b6d12b3e4896d8a6fa22135ed, type: 3}
   - {fileID: -2684252870888892517, guid: e9b5468d1f2d7134d9cd65a837cc3a80, type: 3}
   Traits: 
+  CharacterStatuses: []
+  Hp: 10
 --- !u!4 &163334504
 Transform:
   m_ObjectHideFlags: 0
@@ -257,6 +258,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &825084094
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 897290915325121304, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_Name
+      value: C2
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.47851
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.47851
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.47851
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 897290915325121306, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
 --- !u!1 &880538616
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,13 +592,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Character1
-  Hp: 10
   Actions:
   - {fileID: -361346545464945498, guid: d5179dc8e59ec254f9643e31afb83c55, type: 3}
   - {fileID: -361346545464945498, guid: d5179dc8e59ec254f9643e31afb83c55, type: 3}
   - {fileID: -361346545464945498, guid: d5179dc8e59ec254f9643e31afb83c55, type: 3}
   - {fileID: -361346545464945498, guid: d5179dc8e59ec254f9643e31afb83c55, type: 3}
   Traits: 
+  CharacterStatuses: []
+  Hp: 10
 --- !u!4 &1622950819
 Transform:
   m_ObjectHideFlags: 0
@@ -761,11 +832,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Blob
-  Hp: 10
   Actions:
   - {fileID: 199069494658646, guid: 7d3797c3ce8cc0c409140dbcd675b71d, type: 3}
   - {fileID: -2684252870888892517, guid: e9b5468d1f2d7134d9cd65a837cc3a80, type: 3}
   Traits: 
+  CharacterStatuses: []
+  Hp: 10
 --- !u!1001 &6056985515382709712
 PrefabInstance:
   m_ObjectHideFlags: 0
