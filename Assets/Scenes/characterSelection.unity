@@ -299,10 +299,10 @@ MonoBehaviour:
   Char1Text: {fileID: 467094069}
   Char2Text: {fileID: 569635197}
   Party: {fileID: 865556141}
-  C1: {fileID: 9155567982637663810, guid: 31060b6110fe21c48a1a0c295c0ae2ed, type: 3}
+  C1: {fileID: 5487256582219558868, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
   C2: {fileID: 897290915325121304, guid: e0f6252bd4c6afc4f95b1dca6025a113, type: 3}
   C3: {fileID: 8770146133790955654, guid: 868e4e1769709c14fbdb95a7f654c6dc, type: 3}
-  C4: {fileID: 0}
+  C4: {fileID: 4608949798429055925, guid: c5b54351d7d4ba346b4813c41e6eeb4c, type: 3}
   C5: {fileID: 0}
   C6: {fileID: 0}
   counter: 0
