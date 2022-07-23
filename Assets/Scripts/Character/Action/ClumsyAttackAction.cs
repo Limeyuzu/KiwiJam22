@@ -10,7 +10,14 @@ namespace AdventureTogether
 
         public override IEnumerator Act(INamed thisChar, Party party, Character enemy, TextMeshProUGUI textOutput)
         {
-            yield return textOutput.AddBattleText($"{thisChar.Name} stumbles and fails to attack: ");
+            var random = Random.value;
+            if ( random < 0.5f)
+            {
+                yield return textOutput.AddBattleText($"{thisChar.Name} stumbles and fails to attack: ");
+                yield break;
+            }
+            yield return textOutput.AddBattleText($"{thisChar.Name} attacks {enemy.Name}: ");
+            yield return enemy.ReceiveAttack(Damage, textOutput);
         }
     }
 }

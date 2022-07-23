@@ -524,7 +524,10 @@ MonoBehaviour:
   Name: Character1
   Hp: 10
   Actions:
-  - {fileID: -5741189379697609162, guid: b55d4ed8e66b8b14189351d98aa13506, type: 3}
+  - {fileID: -361346545464945498, guid: d5179dc8e59ec254f9643e31afb83c55, type: 3}
+  - {fileID: -361346545464945498, guid: d5179dc8e59ec254f9643e31afb83c55, type: 3}
+  - {fileID: -361346545464945498, guid: d5179dc8e59ec254f9643e31afb83c55, type: 3}
+  - {fileID: -361346545464945498, guid: d5179dc8e59ec254f9643e31afb83c55, type: 3}
   Traits: 
 --- !u!4 &1622950819
 Transform:
