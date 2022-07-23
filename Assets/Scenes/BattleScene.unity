@@ -382,6 +382,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1640399431791063890, guid: 0c6d926fad56b5d4bb770b5e765e35cd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640399431791063890, guid: 0c6d926fad56b5d4bb770b5e765e35cd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640399431791063890, guid: 0c6d926fad56b5d4bb770b5e765e35cd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640399431887995127, guid: 0c6d926fad56b5d4bb770b5e765e35cd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1640399433555445554, guid: 0c6d926fad56b5d4bb770b5e765e35cd, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -508,8 +524,8 @@ MonoBehaviour:
   Name: Character1
   Hp: 10
   Actions:
-  - {fileID: 8343229307894780495, guid: 7c9a7aba1fa64ca4baf26943e00f5c9d, type: 3}
-  Traits: 00000000
+  - {fileID: -5741189379697609162, guid: b55d4ed8e66b8b14189351d98aa13506, type: 3}
+  Traits: 
 --- !u!4 &1622950819
 Transform:
   m_ObjectHideFlags: 0

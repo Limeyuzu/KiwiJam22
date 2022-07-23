@@ -4,6 +4,11 @@
     {
         Lazy,
         Evasive,
+<<<<<<< Updated upstream
         Fragile
+=======
+        Clumsy
+
+>>>>>>> Stashed changes
     }
 }

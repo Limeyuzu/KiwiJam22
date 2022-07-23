@@ -24,6 +24,11 @@ namespace AdventureTogether
             }
 
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
             foreach (var action in Actions)
             {
                 yield return action.Act(this, party, enemy, textOutput);
