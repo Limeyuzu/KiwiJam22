@@ -8,10 +8,10 @@ namespace AdventureTogether
     {
         [SerializeField] int HealAmount = 1;
 
-        public override IEnumerator Act(Character thisChar, Party party, Character target, TextMeshProUGUI textOutput)
+        public override IEnumerator Act(INamed thisChar, Party party, Character target, TextMeshProUGUI textOutput)
         {
-            yield return(textOutput.AddBattleText($"{thisChar.Name} heals {target.Name}: "));
-            target.ReceiveHealing(HealAmount, textOutput);
+            yield return textOutput.AddBattleText($"{thisChar.Name} heals {target.Name}: ");
+            yield return target.ReceiveHealing(HealAmount, textOutput);
         }
     }
 }

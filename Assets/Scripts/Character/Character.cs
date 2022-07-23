@@ -6,18 +6,21 @@ using UnityEngine;
 
 namespace AdventureTogether
 {
-    public class Character : MonoBehaviour
+    public class Character : MonoBehaviour, INamed
     {
         public string Name;
         [SerializeField] int Hp = 10;
         public List<BaseCharacterAction> Actions;
         public List<CharacterTrait> Traits;
 
+        string INamed.Name => Name;
+
         public IEnumerator PerformTurn(Party party, Character enemy, TextMeshProUGUI textOutput)
         {
-            if (Traits.Contains(CharacterTrait.Lazy) && Random.value < 0.5)
+            var random = Random.value;
+            if (Traits.Contains(CharacterTrait.Lazy) && random < 0.8f)
             {
-                // does nothing
+                yield return textOutput.AddBattleText($"{Name} dozes off.");
                 yield break;
             }
 

@@ -8,7 +8,7 @@ namespace AdventureTogether
     {
         [SerializeField] int Damage = 1;
 
-        public override IEnumerator Act(Character thisChar, Party party, Character enemy, TextMeshProUGUI textOutput)
+        public override IEnumerator Act(INamed thisChar, Party party, Character enemy, TextMeshProUGUI textOutput)
         {
             yield return textOutput.AddBattleText($"{thisChar.Name} attacks {enemy.Name}: ");
             yield return enemy.ReceiveAttack(Damage, textOutput);
