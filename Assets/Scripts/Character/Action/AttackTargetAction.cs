@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace AdventureTogether
 {
-    public class AttackAction : BaseCharacterAction, ICharacterAction
+    public class AttackTargetAction : BaseCharacterAction, ICharacterAction
     {
         [SerializeField] int Damage = 1;
 

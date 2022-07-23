@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -24,8 +23,10 @@ namespace AdventureTogether
                 yield break;
             }
 
-            var actionToDo = Actions.First();
-            yield return actionToDo.Act(this, party, enemy, textOutput);
+            foreach (var action in Actions)
+            {
+                yield return action.Act(this, party, enemy, textOutput);
+            }
         }
 
         public IEnumerator ReceiveAttack(int damage, TextMeshProUGUI textOutput)
