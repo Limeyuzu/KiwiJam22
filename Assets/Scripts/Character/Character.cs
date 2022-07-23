@@ -23,6 +23,7 @@ namespace AdventureTogether
                 yield break;
             }
 
+
             foreach (var action in Actions)
             {
                 yield return action.Act(this, party, enemy, textOutput);
@@ -31,6 +32,8 @@ namespace AdventureTogether
 
         public IEnumerator ReceiveAttack(int damage, TextMeshProUGUI textOutput)
         {
+            if (Traits.Contains(CharacterTrait.Fragile)) damage *= 2;
+
             var random = Random.value;
             if (Traits.Contains(CharacterTrait.Evasive) && random < 1.0f)
             {

@@ -3,7 +3,7 @@
     public enum CharacterTrait
     {
         Lazy,
-        Evasive
-
+        Evasive,
+        Fragile
     }
 }
