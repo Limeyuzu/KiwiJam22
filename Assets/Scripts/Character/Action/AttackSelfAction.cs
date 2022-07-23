@@ -10,7 +10,7 @@ namespace AdventureTogether
 
         public override IEnumerator Act(INamed thisNamed, Party party, Character enemy, TextMeshProUGUI textOutput)
         {
-            yield return textOutput.AddBattleText($"{thisNamed.Name} hurt themself: ");
+            yield return textOutput.AddBattleText($"{thisNamed.Name} hurt themself: ", ActionTextDelaySeconds);
             var thisCHar = (Character)thisNamed;
             yield return thisCHar.ReceiveAttack(Damage, textOutput);
         }

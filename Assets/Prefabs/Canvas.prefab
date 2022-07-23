@@ -122,7 +122,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1640399431791063890}
   m_Direction: 3
   m_Value: 0
-  m_Size: 0.10268572
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -286,85 +286,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1
+  m_text: 'You encounter a Thing.
 
-    2
+    The Thing does nothing.
 
-    3
-
-    4
-
-    5
-
-    6
-
-    7
-
-    8
-
-    9
-
-    10
-
-    11
-
-    12
-
-    13
-
-    141
-
-    1234
-
-    1324
-
-    23
-
-    4
-
-    34
-
-    3
-
-    43
-
-    4
-
-    34
-
-    3
-
-    4
-
-    3
-
-    43
-
-    4
-
-    3
-
-    43
-
-    4
-
-    3
-
-    43
-
-    4
-
-    3
-
-    4
-
-    34
-
-    3
-
-    4
-
-'
+    You doze off.
+    Here is a long sentence that is longer.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -373,8 +300,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 3288334335
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.7647059}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -584,7 +511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.2627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

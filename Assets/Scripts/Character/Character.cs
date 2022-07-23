@@ -17,52 +17,85 @@ namespace AdventureTogether
 
         string INamed.Name => Name;
 
+        private float ReceiveTextSpeedSeconds = 0.5f;
+
         public IEnumerator PerformTurn(Party party, Character enemy, TextMeshProUGUI textOutput)
         {
-            var random = Random.value;
-            if (Traits.Contains(CharacterTrait.Lazy) && random < 0.8f)
+            if (IsDefeated())
             {
-                yield return textOutput.AddBattleText($"{Name} dozes off.");
+                yield break;
+            }
+
+            var random = Random.value;
+            if (Traits.Contains(CharacterTrait.Lazy) && random < 0.3f)
+            {
+                yield return textOutput.AddBattleText($"{Name} dozes off... zzz...", 2.0f);
                 yield break;
             }
 
             foreach (var action in Actions)
             {
                 yield return action.Act(this, party, enemy, textOutput);
+                if (enemy.IsDefeated())
+                {
+                    yield break;
+                }
             }
         }
 
         public IEnumerator ReceiveAttack(int damage, TextMeshProUGUI textOutput)
         {
+            if (IsDefeated())
+            {
+                yield break;
+            }
+
             if (Traits.Contains(CharacterTrait.Fragile)) damage *= 2;
 
             var random = Random.value;
             if (Traits.Contains(CharacterTrait.Evasive) && random < 1.0f)
             {
-                yield return textOutput.AddBattleText($"{Name} evaded the attack.");
+                yield return textOutput.AddBattleText($"{Name} evaded the attack.", ReceiveTextSpeedSeconds);
                 yield break;
             }
 
             yield return textOutput.AddBattleText($"{Name} receives {damage} damage.");
             Hp -= damage;
+
+            if (IsDefeated())
+            {
+                yield return textOutput.AddBattleText($"{Name} falls.");
+            }
         }
 
         public IEnumerator ReceiveHealing(int healedAmount, TextMeshProUGUI textOutput)
         {
-            yield return textOutput.AddBattleText($"{Name} recovers {healedAmount} HP.");
+            if (IsDefeated())
+            {
+                yield break;
+            }
+
+            yield return textOutput.AddBattleText($"{Name} recovers {healedAmount} HP.", ReceiveTextSpeedSeconds);
             Hp += healedAmount;
         }
 
         public IEnumerator ReceiveStatus(ValuedCharacterStatus status, TextMeshProUGUI textOutput)
         {
+            if (IsDefeated())
+            {
+                yield break;
+            }
+
             if (CharacterStatuses.Select(s => s.StatusEffect).Contains(status.StatusEffect))
             {
                 CharacterStatuses.Remove(status);
             }
 
-            yield return textOutput.AddBattleText($"{Name} receives {status.Name}.");
+            yield return textOutput.AddBattleText($"{Name} receives {status.Name}.", ReceiveTextSpeedSeconds);
             CharacterStatuses.Add(status);
         }
+
+        public bool IsDefeated() => Hp <= 0;
 
         // Start is called before the first frame update
         void Start()
