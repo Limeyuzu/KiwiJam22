@@ -164,13 +164,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163334502}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 129.9572, y: 22.949503, z: 5.179637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1644893682}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &880538616
 GameObject:
@@ -398,13 +398,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622950817}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 129.9572, y: 22.949503, z: 5.179637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1644893682}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1644893681 stripped
 MonoBehaviour:
@@ -417,6 +417,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97aafa154a49b24897505ffd3515c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1644893682 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6056985515886479394, guid: 9b37e58589229f347ac7a896e2ce9e76, type: 3}
+  m_PrefabInstance: {fileID: 6056985515382709712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1666267635
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,7 +666,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Party: {fileID: 1644893681}
   Enemy: {fileID: 2039523209765511659}
-  SecondsBetweenText: 1
   BattleText: {fileID: 1688953390}
 --- !u!4 &1827501446
 Transform:
@@ -780,6 +784,10 @@ PrefabInstance:
       propertyPath: Characters.Array.data[1]
       value: 
       objectReference: {fileID: 163334503}
+    - target: {fileID: 6056985515886479393, guid: 9b37e58589229f347ac7a896e2ce9e76, type: 3}
+      propertyPath: Characters.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6056985515886479394, guid: 9b37e58589229f347ac7a896e2ce9e76, type: 3}
       propertyPath: m_RootOrder
       value: 4

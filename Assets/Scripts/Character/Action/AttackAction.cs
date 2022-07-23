@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 
 namespace AdventureTogether
@@ -7,9 +8,10 @@ namespace AdventureTogether
     {
         [SerializeField] int Damage = 1;
 
-        public override void Act(Character thisChar, Party party, Character enemy, TextMeshProUGUI textOutput)
+        public override IEnumerator Act(Character thisChar, Party party, Character enemy, TextMeshProUGUI textOutput)
         {
-            enemy.ReceiveAttack(Damage, textOutput);
+            yield return textOutput.AddBattleText($"{thisChar.Name} attacks {enemy.Name}: ");
+            yield return enemy.ReceiveAttack(Damage, textOutput);
         }
     }
 }
