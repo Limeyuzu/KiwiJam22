@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -8,9 +9,11 @@ namespace AdventureTogether
     public class Character : MonoBehaviour, INamed
     {
         public string Name;
-        [SerializeField] int Hp = 10;
         public List<BaseCharacterAction> Actions;
         public List<CharacterTrait> Traits;
+        public List<ValuedCharacterStatus> CharacterStatuses;
+
+        [SerializeField] int Hp = 10;
 
         string INamed.Name => Name;
 
@@ -40,7 +43,6 @@ namespace AdventureTogether
                 yield break;
             }
 
-
             yield return textOutput.AddBattleText($"{Name} receives {damage} damage.");
             Hp -= damage;
         }
@@ -49,6 +51,17 @@ namespace AdventureTogether
         {
             yield return textOutput.AddBattleText($"{Name} recovers {healedAmount} HP.");
             Hp += healedAmount;
+        }
+
+        public IEnumerator ReceiveStatus(ValuedCharacterStatus status, TextMeshProUGUI textOutput)
+        {
+            if (CharacterStatuses.Select(s => s.StatusEffect).Contains(status.StatusEffect))
+            {
+                CharacterStatuses.Remove(status);
+            }
+
+            yield return textOutput.AddBattleText($"{Name} receives {status.Name}.");
+            CharacterStatuses.Add(status);
         }
 
         // Start is called before the first frame update

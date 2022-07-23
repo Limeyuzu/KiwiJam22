@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -8,10 +9,20 @@ namespace AdventureTogether
     {
         [SerializeField] int Damage = 1;
 
-        public override IEnumerator Act(INamed thisChar, Party party, Character enemy, TextMeshProUGUI textOutput)
+        public override IEnumerator Act(INamed thisNamed, Party party, Character enemy, TextMeshProUGUI textOutput)
         {
-            yield return textOutput.AddBattleText($"{thisChar.Name} attacks {enemy.Name}: ");
-            yield return enemy.ReceiveAttack(Damage, textOutput);
+            var additionalDamage = 0;
+            if (thisNamed is Character)
+            {
+                var attackUpEffect = ((Character)thisNamed).CharacterStatuses.FirstOrDefault(s => s.StatusEffect == StatusEffect.AttackUp);
+                if (attackUpEffect != null)
+                {
+                    additionalDamage += attackUpEffect.Value;
+                }
+            }
+
+            yield return textOutput.AddBattleText($"{thisNamed.Name} attacks {enemy.Name}: ");
+            yield return enemy.ReceiveAttack(Damage + additionalDamage, textOutput);
         }
     }
 }
