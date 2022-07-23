@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace AdventureTogether
@@ -7,14 +8,18 @@ namespace AdventureTogether
     {
         [SerializeField] int Hp = 10;
         public List<ICharacterAction> Actions;
-        public List<ICharacterTrait> Traits;
+        public List<CharacterTrait> Traits;
 
-        public void PerformTurn(Character enemy)
+        public void PerformTurn(Party party, Character enemy)
         {
-            foreach (var action in Actions)
+            if (Traits.Contains(CharacterTrait.Lazy) && Random.value < 0.5)
             {
-                action.ActOnOtherCharacter(this, enemy);
+                // does nothing
+                return;
             }
+
+            var actionToDo = Actions.First();
+            actionToDo.Act(this, party, enemy);
         }
 
         public void ReceiveAttack(int damage)
