@@ -2,6 +2,8 @@
 {
     public enum CharacterTrait
     {
-        Lazy
+        Lazy,
+        Evasive
+
     }
 }

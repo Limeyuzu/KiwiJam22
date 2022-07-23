@@ -31,6 +31,14 @@ namespace AdventureTogether
 
         public IEnumerator ReceiveAttack(int damage, TextMeshProUGUI textOutput)
         {
+            var random = Random.value;
+            if (Traits.Contains(CharacterTrait.Evasive) && random < 1.0f)
+            {
+                yield return textOutput.AddBattleText($"{Name} evaded the attack.");
+                yield break;
+            }
+
+
             yield return textOutput.AddBattleText($"{Name} receives {damage} damage.");
             Hp -= damage;
         }
