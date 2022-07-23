@@ -465,12 +465,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1640399431887995115, guid: 0c6d926fad56b5d4bb770b5e765e35cd, type: 3}
-      propertyPath: m_fontColor.a
-      value: 0.7647059
-      objectReference: {fileID: 0}
-    - target: {fileID: 1640399431887995115, guid: 0c6d926fad56b5d4bb770b5e765e35cd, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 3288334335
+      propertyPath: m_text
+      value: 'You encounter a Thing.
+
+        The Thing does nothing.
+
+        You
+        doze off. Here is a long sentence that is longer.'
       objectReference: {fileID: 0}
     - target: {fileID: 1640399431887995127, guid: 0c6d926fad56b5d4bb770b5e765e35cd, type: 3}
       propertyPath: m_SizeDelta.y
