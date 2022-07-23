@@ -1,14 +1,15 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 namespace AdventureTogether
 {
-    public class HealTargetAction : ICharacterAction
+    public class HealTargetAction : BaseCharacterAction, ICharacterAction
     {
         [SerializeField] int HealAmount = 1;
 
-        public void Act(Character thisChar, Party party, Character target)
+        public override void Act(Character thisChar, Party party, Character target, TextMeshProUGUI BattleText)
         {
-            target.ReceiveHealing(HealAmount);
+            target.ReceiveHealing(HealAmount, BattleText);
         }
     }
 }

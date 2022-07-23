@@ -1,14 +1,15 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 namespace AdventureTogether
 {
-    public class AttackAction : ICharacterAction
+    public class AttackAction : BaseCharacterAction, ICharacterAction
     {
         [SerializeField] int Damage = 1;
 
-        public void Act(Character thisChar, Party party, Character enemy)
+        public override void Act(Character thisChar, Party party, Character enemy, TextMeshProUGUI textOutput)
         {
-            enemy.ReceiveAttack(Damage);
+            enemy.ReceiveAttack(Damage, textOutput);
         }
     }
 }

@@ -5,6 +5,6 @@ namespace AdventureTogether
 {
     public class Party : MonoBehaviour
     {
-        public List<Character> Characters { get; set; }
+        public List<Character> Characters;
     }
 }

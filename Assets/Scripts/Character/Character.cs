@@ -1,16 +1,18 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 namespace AdventureTogether
 {
     public class Character : MonoBehaviour
     {
+        public string Name;
         [SerializeField] int Hp = 10;
-        public List<ICharacterAction> Actions;
+        public List<BaseCharacterAction> Actions;
         public List<CharacterTrait> Traits;
 
-        public void PerformTurn(Party party, Character enemy)
+        public void PerformTurn(Party party, Character enemy, TextMeshProUGUI textOutput)
         {
             if (Traits.Contains(CharacterTrait.Lazy) && Random.value < 0.5)
             {
@@ -19,16 +21,18 @@ namespace AdventureTogether
             }
 
             var actionToDo = Actions.First();
-            actionToDo.Act(this, party, enemy);
+            actionToDo.Act(this, party, enemy, textOutput);
         }
 
-        public void ReceiveAttack(int damage)
+        public void ReceiveAttack(int damage, TextMeshProUGUI textOutput)
         {
+            textOutput.AddBattleText($"{Name} receives {damage} damage.");
             Hp -= damage;
         }
 
-        public void ReceiveHealing(int healedAmount)
+        public void ReceiveHealing(int healedAmount, TextMeshProUGUI textOutput)
         {
+            textOutput.AddBattleText($"{Name} recovers {healedAmount} HP.");
             Hp += healedAmount;
         }
 
