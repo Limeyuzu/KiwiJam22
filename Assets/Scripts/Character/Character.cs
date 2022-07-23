@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -12,27 +13,27 @@ namespace AdventureTogether
         public List<BaseCharacterAction> Actions;
         public List<CharacterTrait> Traits;
 
-        public void PerformTurn(Party party, Character enemy, TextMeshProUGUI textOutput)
+        public IEnumerator PerformTurn(Party party, Character enemy, TextMeshProUGUI textOutput)
         {
             if (Traits.Contains(CharacterTrait.Lazy) && Random.value < 0.5)
             {
                 // does nothing
-                return;
+                yield break;
             }
 
             var actionToDo = Actions.First();
-            actionToDo.Act(this, party, enemy, textOutput);
+            yield return actionToDo.Act(this, party, enemy, textOutput);
         }
 
-        public void ReceiveAttack(int damage, TextMeshProUGUI textOutput)
+        public IEnumerator ReceiveAttack(int damage, TextMeshProUGUI textOutput)
         {
-            textOutput.AddBattleText($"{Name} receives {damage} damage.");
+            yield return textOutput.AddBattleText($"{Name} receives {damage} damage.");
             Hp -= damage;
         }
 
-        public void ReceiveHealing(int healedAmount, TextMeshProUGUI textOutput)
+        public IEnumerator ReceiveHealing(int healedAmount, TextMeshProUGUI textOutput)
         {
-            textOutput.AddBattleText($"{Name} recovers {healedAmount} HP.");
+            yield return textOutput.AddBattleText($"{Name} recovers {healedAmount} HP.");
             Hp += healedAmount;
         }
 

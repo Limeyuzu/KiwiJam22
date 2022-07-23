@@ -9,25 +9,22 @@ namespace AdventureTogether
     {
         [SerializeField] Party Party;
         [SerializeField] Character Enemy;
-        [SerializeField] float SecondsBetweenText = 1.0f;
         [SerializeField] TextMeshProUGUI BattleText;
 
         IEnumerator Start()
         {
             BattleText.text = "";
-            BattleText.AddBattleText($"You encounter {Enemy.Name}!");
-
-            yield return new WaitForSecondsRealtime(3);
+            yield return BattleText.AddBattleText($"You encounter {Enemy.Name}!", 3.0f);
 
             foreach (var character in Party.Characters)
             {
-                character.PerformTurn(Party, Enemy, BattleText);
-                yield return new WaitForSecondsRealtime(SecondsBetweenText);
+                yield return character.PerformTurn(Party, Enemy, BattleText);
             }
 
             var enemyTarget = Party.Characters.First();
-            Enemy.PerformTurn(Party, enemyTarget, BattleText);
-            yield return new WaitForSecondsRealtime(SecondsBetweenText);
+            yield return Enemy.PerformTurn(Party, enemyTarget, BattleText);
+
+            yield return new WaitForSecondsRealtime(3);
         }
     }
 }

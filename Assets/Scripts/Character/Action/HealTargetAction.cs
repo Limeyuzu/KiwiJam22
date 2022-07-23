@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 
 namespace AdventureTogether
@@ -7,9 +8,10 @@ namespace AdventureTogether
     {
         [SerializeField] int HealAmount = 1;
 
-        public override void Act(Character thisChar, Party party, Character target, TextMeshProUGUI BattleText)
+        public override IEnumerator Act(Character thisChar, Party party, Character target, TextMeshProUGUI textOutput)
         {
-            target.ReceiveHealing(HealAmount, BattleText);
+            yield return(textOutput.AddBattleText($"{thisChar.Name} heals {target.Name}: "));
+            target.ReceiveHealing(HealAmount, textOutput);
         }
     }
 }
