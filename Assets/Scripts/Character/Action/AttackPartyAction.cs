@@ -21,7 +21,7 @@ namespace AdventureTogether
                 }
             }
 
-            yield return textOutput.AddBattleText($"{thisNamed.Name} attacks the party: ");
+            yield return textOutput.AddBattleText($"{thisNamed.Name} attacks the party: ", ActionTextDelaySeconds);
             foreach (var target in party.Characters)
             {
                 yield return target.ReceiveAttack(Damage + additionalDamage, textOutput);

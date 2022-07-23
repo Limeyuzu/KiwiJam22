@@ -16,15 +16,25 @@ namespace AdventureTogether
             BattleText.text = "";
             yield return BattleText.AddBattleText($"You encounter {Enemy.Name}!", 3.0f);
 
-            foreach (var character in Party.Characters)
+            while (!Party.IsDefeated() && !Enemy.IsDefeated())
             {
-                yield return character.PerformTurn(Party, Enemy, BattleText);
+                foreach (var character in Party.Characters)
+                {
+                    yield return character.PerformTurn(Party, Enemy, BattleText);
+                }
+
+                var enemyTarget = Party.Characters.First(c => !c.IsDefeated());
+                yield return Enemy.PerformTurn(Party, enemyTarget, BattleText);
             }
 
-            var enemyTarget = Party.Characters.First();
-            yield return Enemy.PerformTurn(Party, enemyTarget, BattleText);
-
-            yield return new WaitForSecondsRealtime(3);
+            if (Enemy.IsDefeated())
+            {
+                yield return BattleText.AddBattleText($"You continue on your journey.", 3.0f);
+            } 
+            else if (Party.IsDefeated())
+            {
+                yield return BattleText.AddBattleText($"The party has fallen...", 3.0f);
+            }
         }
     }
 }

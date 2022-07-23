@@ -13,10 +13,10 @@ namespace AdventureTogether
             var random = Random.value;
             if ( random < 0.5f)
             {
-                yield return textOutput.AddBattleText($"{thisChar.Name} stumbles and fails to attack: ");
+                yield return textOutput.AddBattleText($"{thisChar.Name} stumbles and fails to attack.");
                 yield break;
             }
-            yield return textOutput.AddBattleText($"{thisChar.Name} attacks {enemy.Name}: ");
+            yield return textOutput.AddBattleText($"{thisChar.Name} attacks {enemy.Name}: ", ActionTextDelaySeconds);
             yield return enemy.ReceiveAttack(Damage, textOutput);
         }
     }

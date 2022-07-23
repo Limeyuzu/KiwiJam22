@@ -21,7 +21,7 @@ namespace AdventureTogether
                 }
             }
 
-            yield return textOutput.AddBattleText($"{thisNamed.Name} attacks {enemy.Name}: ");
+            yield return textOutput.AddBattleText($"{thisNamed.Name} attacks {enemy.Name}: ", ActionTextDelaySeconds);
             yield return enemy.ReceiveAttack(Damage + additionalDamage, textOutput);
         }
     }

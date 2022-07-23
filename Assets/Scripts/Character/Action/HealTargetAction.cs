@@ -10,7 +10,7 @@ namespace AdventureTogether
 
         public override IEnumerator Act(INamed thisChar, Party party, Character target, TextMeshProUGUI textOutput)
         {
-            yield return textOutput.AddBattleText($"{thisChar.Name} heals {target.Name}: ");
+            yield return textOutput.AddBattleText($"{thisChar.Name} heals {target.Name}: ", ActionTextDelaySeconds);
             yield return target.ReceiveHealing(HealAmount, textOutput);
         }
     }
