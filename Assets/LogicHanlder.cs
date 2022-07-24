@@ -144,8 +144,8 @@ public class LogicHanlder : MonoBehaviour
         GameObject LeftCharacterHolder = CHolder[Rand1];
         GameObject RightCharacterHolder = CHolder[Rand2];
 
-        CHolder.RemoveAt(Rand1);
-        CHolder.RemoveAt(Rand2);
+        //CHolder.RemoveAt(Rand1);
+        //CHolder.RemoveAt(Rand2);
 
 
 
