@@ -13,7 +13,7 @@ public class SceneLoader : MonoBehaviour
     public static IEnumerator LoadGameOverSceneCoroutine(float delaySeconds)
     {
         yield return new WaitForSeconds(delaySeconds);
-        SceneManager.LoadScene("GameOverScene");
+        SceneManager.LoadScene(3);
     }
 
     public static void LoadNextScene()
