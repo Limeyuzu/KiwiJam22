@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Character1
-  Actions: []
+  Actions:
+  - {fileID: 8343229307894780495, guid: 7c9a7aba1fa64ca4baf26943e00f5c9d, type: 3}
   Traits: 0100000002000000
   CharacterStatuses: []
   Hp: 10

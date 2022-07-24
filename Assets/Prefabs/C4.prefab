@@ -61,11 +61,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Name
-      value: 
+      value: Knight
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Traits.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
+      propertyPath: Actions.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Traits.Array.data[0]
@@ -75,5 +79,9 @@ PrefabInstance:
       propertyPath: Traits.Array.data[1]
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
+      propertyPath: Actions.Array.data[0]
+      value: 
+      objectReference: {fileID: 8343229307894780495, guid: 7c9a7aba1fa64ca4baf26943e00f5c9d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}

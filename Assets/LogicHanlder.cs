@@ -27,6 +27,8 @@ public class LogicHanlder : MonoBehaviour
       
     public int counter = 0;
     public int[] selectedVal = new int[4];
+    
+    private float xOffset = 1;
 
     private string[] names;
 
@@ -81,6 +83,8 @@ public class LogicHanlder : MonoBehaviour
         Destroy(aa);
         Party.Characters.Add(bb.GetComponent<Character>());
         bb.SetActive(false);
+        bb.transform.position = new Vector3(xOffset * counter, 0);
+        bb.transform.localScale = new Vector3(0.5f, 0.5f);
         seedNewCharacters();
     }
 
@@ -101,6 +105,8 @@ public class LogicHanlder : MonoBehaviour
         Destroy(aa);
         Party.Characters.Add(bb.GetComponent<Character>());
         bb.SetActive(false);
+        bb.transform.position = new Vector3(xOffset * counter, 0);
+        bb.transform.localScale = new Vector3(0.5f, 0.5f);
         seedNewCharacters();
     }
 
@@ -131,8 +137,8 @@ public class LogicHanlder : MonoBehaviour
         GameObject LeftCharacterHolder = CHolder[Rand1];
         GameObject RightCharacterHolder = CHolder[Rand2];
 
-        CHolder.RemoveAt(Rand1);
-        CHolder.RemoveAt(Rand2);
+        //CHolder.RemoveAt(Rand1);
+        //CHolder.RemoveAt(Rand2);
 
 
 
