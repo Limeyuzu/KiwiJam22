@@ -13,8 +13,6 @@ public class LogicHanlder : MonoBehaviour
     public Button selectRightButton;
     public TMPro.TMP_Text tempText;
 
-    public GameObject leftChar;
-    public GameObject rightChar;
     public GameObject button1;
     public GameObject button2;
 
@@ -28,15 +26,16 @@ public class LogicHanlder : MonoBehaviour
     [SerializeReference] GameObject C3;    
     [SerializeReference] GameObject C4;    
     [SerializeReference] GameObject C5;    
-    [SerializeReference] GameObject C6;    
+
+    public List<GameObject> CHolder;    
 
       
     public int counter = 0;
     public int[] selectedVal = new int[4];
 
     private string[] names;
-    
 
+    List<GameObject> CharacterList;
 
     //list of prefabs
 
@@ -47,7 +46,7 @@ public class LogicHanlder : MonoBehaviour
         selectLeftButton.onClick.AddListener(LeftSelect);
         selectRightButton.onClick.AddListener(RightSelect);
 
-        //create list of characters....
+        //create list of characters...
         //
         names = new string[6] { "char1", "tim2", "kale3", "jake4", "mixhale5", "mike6"};
         seedNewCharacters();
@@ -62,7 +61,7 @@ public class LogicHanlder : MonoBehaviour
 
 
 
-        if (counter >= 100)
+        if (counter >= 5)
         {
             removeButtons();
             Debug.Log("finish");
@@ -82,8 +81,11 @@ public class LogicHanlder : MonoBehaviour
         //Character newcharacter = createNew.AddComponent<Character>() as Character;
         //newcharacter.Name = Char1Text.text;
         //Party.Characters.Add(newcharacter);
-        GameObject aa = GameObject.Find("Right" + counter);
+        GameObject aa = GameObject.Find("Right" + (counter - 1));
+        GameObject bb = GameObject.Find("Left" + (counter - 1));
         Destroy(aa);
+        Party.Characters.Add(bb.GetComponent<Character>());
+        bb.SetActive(false);
         seedNewCharacters();
     }
 
@@ -99,16 +101,17 @@ public class LogicHanlder : MonoBehaviour
         //newcharacter.Name = Char2Text.text;
         //Party.Characters.Add(newcharacter);
 
-        GameObject aa = GameObject.Find("Left" + counter);
+        GameObject aa = GameObject.Find("Left" + (counter - 1));
+        GameObject bb = GameObject.Find("Right" + (counter - 1));
         Destroy(aa);
+        Party.Characters.Add(bb.GetComponent<Character>());
+        bb.SetActive(false);
         seedNewCharacters();
     }
 
     void removeButtons()
     {
         
-            leftChar.SetActive(false);
-            rightChar.SetActive(false);
 
             button1.SetActive(false);
             button2.SetActive(false);
@@ -122,21 +125,10 @@ public class LogicHanlder : MonoBehaviour
 
         float randomVal = Random.Range(0, 100);
 
-        GameObject LeftCharacterHolder;
-        GameObject RightCharacterHolder;
+        GameObject LeftCharacterHolder = CHolder[Random.Range(0, CHolder.Count)];
+        GameObject RightCharacterHolder = CHolder[Random.Range(0, CHolder.Count)]; 
 
-        if (randomVal <= 10)
-        {
-            LeftCharacterHolder = C1;
-        }
-        else if(randomVal <=20)
-        {
-            LeftCharacterHolder = C2;
-        }
-        else
-        {
-            LeftCharacterHolder = C3;
-        }
+
 
         //make 2 new instaces of characters
         GameObject A = Instantiate(LeftCharacterHolder) as GameObject;
@@ -144,7 +136,7 @@ public class LogicHanlder : MonoBehaviour
         A.transform.position = new Vector3(-2.5f, 0);
         A.transform.parent = Party.transform;
 
-        GameObject B = Instantiate(C2) as GameObject;
+        GameObject B = Instantiate(RightCharacterHolder) as GameObject;
         B.name = "Right" + counter;
         B.transform.position = new Vector3(2.5f, 0);
         B.transform.parent = Party.transform;

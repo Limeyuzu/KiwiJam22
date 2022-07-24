@@ -13,6 +13,7 @@ namespace AdventureTogether
 
         IEnumerator Start()
         {
+            Party = FindObjectOfType<Party>();
             BattleText.text = "";
             yield return BattleText.AddBattleText($"You encounter {Enemy.Name}!", 3.0f);
 
