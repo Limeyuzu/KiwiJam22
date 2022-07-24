@@ -19,6 +19,11 @@ namespace AdventureTogether
                 {
                     additionalDamage += attackUpEffect.Value;
                 }
+                var attackDownEffect = ((Character)thisNamed).CharacterStatuses.FirstOrDefault(s => s.StatusEffect == StatusEffect.AttackDown);
+                if (attackDownEffect != null)
+                {
+                    additionalDamage += attackDownEffect.Value;
+                }
             }
 
             yield return textOutput.AddBattleText($"{thisNamed.Name} attacks the party: ", ActionTextDelaySeconds);
