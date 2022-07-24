@@ -63,6 +63,7 @@ public class LogicHanlder : MonoBehaviour
 
         if (counter >= 5)
         {
+
             removeButtons();
             Debug.Log("finish");
             SceneLoader.LoadNextScene();
@@ -111,23 +112,26 @@ public class LogicHanlder : MonoBehaviour
 
     void removeButtons()
     {
-        
+        GameObject aa = GameObject.Find("Right" + (counter));
+        GameObject bb = GameObject.Find("Left" + (counter));
 
-            button1.SetActive(false);
+        Destroy(aa);
+        Destroy(bb);
+
+        button1.SetActive(false);
             button2.SetActive(false);
     }
 
     void seedNewCharacters()
     {
 
-        Char1Text.SetText(names[Random.Range(0, 6)]);
-        Char2Text.SetText(names[Random.Range(0, 6)]);
 
-        float randomVal = Random.Range(0, 100);
 
         GameObject LeftCharacterHolder = CHolder[Random.Range(0, CHolder.Count)];
         GameObject RightCharacterHolder = CHolder[Random.Range(0, CHolder.Count)]; 
 
+        Char1Text.SetText(LeftCharacterHolder.GetComponent<Character>().Name);
+        Char2Text.SetText(RightCharacterHolder.GetComponent<Character>().Name);
 
 
         //make 2 new instaces of characters

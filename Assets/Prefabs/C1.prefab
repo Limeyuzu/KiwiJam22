@@ -45,9 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db50050b5f4e8284396870d51030f4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Name: Character1
   Actions: []
   Traits: 0100000002000000
+=======
+  Name: BowPerson
+  Actions:
+  - {fileID: 8343229307894780495, guid: 7c9a7aba1fa64ca4baf26943e00f5c9d, type: 3}
+  Traits: 01000000
+>>>>>>> Stashed changes
   CharacterStatuses: []
   Hp: 10
 --- !u!212 &-1738210301316939291
