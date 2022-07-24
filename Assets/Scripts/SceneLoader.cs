@@ -32,4 +32,9 @@ public class SceneLoader : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public static void LoadChoose()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

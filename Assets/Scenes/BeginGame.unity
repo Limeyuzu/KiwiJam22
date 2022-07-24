@@ -209,7 +209,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1745561424}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadStartScene
+        m_MethodName: LoadChoose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
