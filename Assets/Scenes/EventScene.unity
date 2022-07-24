@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 199494919}
   - component: {fileID: 199494918}
   - component: {fileID: 199494920}
+  - component: {fileID: 199494921}
   m_Layer: 0
   m_Name: Location
   m_TagString: Untagged
@@ -233,6 +234,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealAmount: 1
+--- !u!114 &199494921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199494917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f07b78ccb9b2fe4ca45534355a16bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrantStatus: {fileID: -2985395209530622353, guid: 37f5fa2ad34807440b65bfda9865a394, type: 3}
 --- !u!1 &482537635
 GameObject:
   m_ObjectHideFlags: 0
