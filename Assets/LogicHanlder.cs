@@ -13,8 +13,6 @@ public class LogicHanlder : MonoBehaviour
     public Button selectRightButton;
     public TMPro.TMP_Text tempText;
 
-    public GameObject leftChar;
-    public GameObject rightChar;
     public GameObject button1;
     public GameObject button2;
 
@@ -114,8 +112,6 @@ public class LogicHanlder : MonoBehaviour
     void removeButtons()
     {
         
-            leftChar.SetActive(false);
-            rightChar.SetActive(false);
 
             button1.SetActive(false);
             button2.SetActive(false);
