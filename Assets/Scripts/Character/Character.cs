@@ -83,6 +83,7 @@ namespace AdventureTogether
 
             if (IsDefeated())
             {
+                GetComponent<SpriteRenderer>().enabled = false;
                 yield return textOutput.AddBattleText($"{Name} falls.");
             }
         }
