@@ -72,7 +72,7 @@ namespace AdventureTogether
             if (Traits.Contains(CharacterTrait.Fragile)) damage *= 2;
 
             var random = Random.value;
-            if (Traits.Contains(CharacterTrait.Evasive) && random < 1.0f)
+            if (Traits.Contains(CharacterTrait.Evasive) && random < 0.3f)
             {
                 yield return textOutput.AddBattleText($"{Name} evaded the attack.", ReceiveTextSpeedSeconds);
                 yield break;
