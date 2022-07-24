@@ -83,7 +83,7 @@ public class LogicHanlder : MonoBehaviour
         Destroy(aa);
         Party.Characters.Add(bb.GetComponent<Character>());
         bb.SetActive(false);
-        bb.transform.position = new Vector3(xOffset * counter - 8.5f, 0);
+        bb.transform.position = new Vector3(xOffset * counter - 8.0f, 0);
         bb.transform.localScale = new Vector3(0.5f, 0.5f);
         seedNewCharacters();
     }
@@ -105,7 +105,7 @@ public class LogicHanlder : MonoBehaviour
         Destroy(aa);
         Party.Characters.Add(bb.GetComponent<Character>());
         bb.SetActive(false);
-        bb.transform.position = new Vector3(xOffset * counter - 8.5f, 0);
+        bb.transform.position = new Vector3(xOffset * counter - 8.0f, 0);
         bb.transform.localScale = new Vector3(0.5f, 0.5f);
         seedNewCharacters();
     }
