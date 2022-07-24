@@ -60,6 +60,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
+      propertyPath: Hp
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Name
       value: 'Bob '
       objectReference: {fileID: 0}
@@ -69,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Actions.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Traits.Array.data[0]
@@ -82,10 +86,10 @@ PrefabInstance:
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Actions.Array.data[0]
       value: 
-      objectReference: {fileID: 8343229307894780495, guid: 7c9a7aba1fa64ca4baf26943e00f5c9d, type: 3}
+      objectReference: {fileID: -361346545464945498, guid: d5179dc8e59ec254f9643e31afb83c55, type: 3}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Actions.Array.data[1]
       value: 
-      objectReference: {fileID: 1557023358085351354, guid: e96b459991d236445aad598a9093ca7b, type: 3}
+      objectReference: {fileID: -361346545464945498, guid: d5179dc8e59ec254f9643e31afb83c55, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
