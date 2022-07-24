@@ -5,7 +5,15 @@
         Lazy,
         Evasive,
         Fragile,
-        Clumsy
+        Clumsy,
+        Intimidate,
+        Scared,
+        Weaken,
+        Resilient,
+        Sacrificial,
+        Infuriated,
+        Medic
+        
 
     }
 }

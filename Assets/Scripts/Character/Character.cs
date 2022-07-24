@@ -32,9 +32,28 @@ namespace AdventureTogether
                 yield return textOutput.AddBattleText($"{Name} dozes off... zzz...", 2.0f);
                 yield break;
             }
+            if (Traits.Contains(CharacterTrait.Scared) && random < 0.3f)
+            {
+                yield return textOutput.AddBattleText($"{Name} is too scared to move.");
+                yield break;
+            }
+
+            if (Traits.Contains(CharacterTrait.Intimidate) && random < 0.1f)
+            {
+                //lower enemy attack
+            }
+
+
+
+            //check if poisioned
 
             foreach (var action in Actions)
             {
+                if (Traits.Contains(CharacterTrait.Scared) && random < 0.3f)
+                {
+                    yield return textOutput.AddBattleText($"{Name} is too scared to move.");
+                    yield break;
+                }
                 yield return action.Act(this, party, enemy, textOutput);
                 if (enemy.IsDefeated())
                 {

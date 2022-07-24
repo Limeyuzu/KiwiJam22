@@ -2,6 +2,9 @@
 {
     public enum StatusEffect
     {
-        AttackUp
+        AttackUp,
+        AttackDown,
+        Poison,
+
     }
 }

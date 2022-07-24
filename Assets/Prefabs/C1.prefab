@@ -46,10 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Character1
-  Actions:
-  - {fileID: 0}
-  - {fileID: 0}
-  Traits: 01000000
+  Actions: []
+  Traits: 0100000002000000
   CharacterStatuses: []
   Hp: 10
 --- !u!212 &-1738210301316939291

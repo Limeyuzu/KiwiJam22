@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: cc3b72eb4cbdad64db5c65adf278508e, type: 3}
     - target: {fileID: 5487256582219558868, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: m_Name
-      value: Character1
+      value: C5
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558870, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Traits.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Actions.Array.size
@@ -74,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Traits.Array.data[0]
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
+      propertyPath: Traits.Array.data[1]
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Actions.Array.data[0]
