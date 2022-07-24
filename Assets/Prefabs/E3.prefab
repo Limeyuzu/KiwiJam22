@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2039523209765511659}
   - component: {fileID: 8395290657745155859}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: E3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db50050b5f4e8284396870d51030f4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Cyclops
+  Name: Evil King
   Actions:
   - {fileID: -2684252870888892517, guid: e9b5468d1f2d7134d9cd65a837cc3a80, type: 3}
-  Traits: 0000000003000000
+  Traits: 01000000
   CharacterStatuses: []
-  Hp: 20
+  Hp: 50
 --- !u!212 &8395290657745155859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a781e402a440b8746ac54a3723957018, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42db75cfc1674784691fba5155ad859c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
