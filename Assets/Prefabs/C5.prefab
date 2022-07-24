@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Name
-      value: 'Bob '
+      value: DumbleDoor
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Traits.Array.size
@@ -82,7 +82,7 @@ PrefabInstance:
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Actions.Array.data[0]
       value: 
-      objectReference: {fileID: 8343229307894780495, guid: 7c9a7aba1fa64ca4baf26943e00f5c9d, type: 3}
+      objectReference: {fileID: -2556305231168449125, guid: f95bc8330277a1641aa899fc7c2cd6aa, type: 3}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Actions.Array.data[1]
       value: 

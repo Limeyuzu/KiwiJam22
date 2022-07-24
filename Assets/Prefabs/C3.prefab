@@ -61,7 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Name
-      value: Priest
+      value: Miyamoto Musashi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
+      propertyPath: Traits.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Actions.Array.size
@@ -70,6 +74,6 @@ PrefabInstance:
     - target: {fileID: 5487256582219558871, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
       propertyPath: Actions.Array.data[0]
       value: 
-      objectReference: {fileID: -2556305231168449125, guid: 01892272b7a31ce41a5a79f105535d4b, type: 3}
+      objectReference: {fileID: 1557023358085351354, guid: e96b459991d236445aad598a9093ca7b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97f50f4085fd2241a7774edd298cb8b, type: 3}
