@@ -21,11 +21,6 @@ public class LogicHanlder : MonoBehaviour
 
     public Party Party;
 
-    [SerializeReference] GameObject C1;    
-    [SerializeReference] GameObject C2;    
-    [SerializeReference] GameObject C3;    
-    [SerializeReference] GameObject C4;    
-    [SerializeReference] GameObject C5;    
 
     public List<GameObject> CHolder;    
 
@@ -61,7 +56,7 @@ public class LogicHanlder : MonoBehaviour
 
 
 
-        if (counter >= 5)
+        if (counter >= 3)
         {
             removeButtons();
             Debug.Log("finish");
@@ -111,7 +106,11 @@ public class LogicHanlder : MonoBehaviour
 
     void removeButtons()
     {
-        
+        GameObject aa = GameObject.Find("Right" + (counter)); 
+        GameObject bb = GameObject.Find("Left" + (counter));
+
+        Destroy(aa);
+        Destroy(bb);
 
             button1.SetActive(false);
             button2.SetActive(false);
@@ -120,13 +119,20 @@ public class LogicHanlder : MonoBehaviour
     void seedNewCharacters()
     {
 
-        Char1Text.SetText(names[Random.Range(0, 6)]);
-        Char2Text.SetText(names[Random.Range(0, 6)]);
+        int Rand1 = Random.Range(0, CHolder.Count);
+        int Rand2 = Random.Range(0, CHolder.Count);
+        
+        while (Rand1 == Rand2)
+        {
+            Rand2 = Random.Range(0, CHolder.Count);
+        }
 
-        float randomVal = Random.Range(0, 100);
 
-        GameObject LeftCharacterHolder = CHolder[Random.Range(0, CHolder.Count)];
-        GameObject RightCharacterHolder = CHolder[Random.Range(0, CHolder.Count)]; 
+        GameObject LeftCharacterHolder = CHolder[Rand1];
+        GameObject RightCharacterHolder = CHolder[Rand2];
+
+        CHolder.RemoveAt(Rand1);
+        CHolder.RemoveAt(Rand2);
 
 
 
@@ -140,7 +146,10 @@ public class LogicHanlder : MonoBehaviour
         B.name = "Right" + counter;
         B.transform.position = new Vector3(2.5f, 0);
         B.transform.parent = Party.transform;
-        
+
+        Char1Text.SetText(LeftCharacterHolder.GetComponent<Character>().Name);
+        Char2Text.SetText(RightCharacterHolder.GetComponent<Character>().Name);
+
      }
 
 }
