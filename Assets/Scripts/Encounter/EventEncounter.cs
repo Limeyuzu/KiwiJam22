@@ -16,6 +16,7 @@ namespace AdventureTogether
             BattleText.text = "";
             yield return BattleText.AddBattleText($"You encounter a {EventLocation.Name}, and take a short rest.", 3.0f);
 
+
             yield return EventLocation.Action.Act(EventLocation, Party, null, BattleText);
 
             yield return new WaitForSecondsRealtime(3);

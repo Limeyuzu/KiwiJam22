@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -10,9 +11,12 @@ namespace AdventureTogether
         [SerializeField] Party Party;
         [SerializeField] Character Enemy;
         [SerializeField] TextMeshProUGUI BattleText;
+        [SerializeField] List<GameObject> PossibleEnemies;
 
         IEnumerator Start()
         {
+            SpawnEnemy();
+
             Party = FindObjectOfType<Party>();
             BattleText.text = "";
             yield return BattleText.AddBattleText($"You encounter {Enemy.Name}!", 3.0f);
@@ -36,6 +40,15 @@ namespace AdventureTogether
             {
                 yield return BattleText.AddBattleText($"The party has fallen...", 3.0f);
             }
+        }
+
+        private void SpawnEnemy()
+        {
+            var enemyLocation = GameObject.Find("EnemyLocation");
+            var random = (int)Random.Range(0, PossibleEnemies.Count);
+            var enemy = Instantiate(PossibleEnemies[random], new Vector3(0, 0, 0), Quaternion.identity);
+            enemy.transform.position = enemyLocation.transform.position;
+            Enemy = enemy.GetComponent<Character>();
         }
     }
 }
