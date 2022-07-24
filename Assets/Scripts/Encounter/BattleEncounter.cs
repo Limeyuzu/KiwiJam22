@@ -44,7 +44,14 @@ namespace AdventureTogether
                 } 
                 else
                 {
-                    SceneLoader.LoadEventScene();
+                    if (Random.value < 0.5)
+                    {
+                        SceneLoader.LoadEventScene();
+                    } 
+                    else
+                    {
+                        SceneLoader.LoadBattleScene();
+                    }
                 }
             } 
             else if (Party.IsDefeated())
