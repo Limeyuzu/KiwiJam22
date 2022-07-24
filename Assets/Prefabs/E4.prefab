@@ -50,7 +50,7 @@ MonoBehaviour:
   - {fileID: -2684252870888892517, guid: e9b5468d1f2d7134d9cd65a837cc3a80, type: 3}
   Traits: 01000000
   CharacterStatuses: []
-  Hp: 20
+  Hp: 15
 --- !u!212 &8395290657745155859
 SpriteRenderer:
   m_ObjectHideFlags: 0
