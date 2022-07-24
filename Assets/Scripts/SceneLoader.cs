@@ -13,13 +13,23 @@ public class SceneLoader : MonoBehaviour
     public static IEnumerator LoadGameOverSceneCoroutine(float delaySeconds)
     {
         yield return new WaitForSeconds(delaySeconds);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
     }
 
     public static void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+    public static void LoadBattleScene()
+    {
+        SceneManager.LoadScene("BattleScene");
+    }
+
+    public static void LoadEventScene()
+    {
+        SceneManager.LoadScene("EventScene");
     }
 
     public static IEnumerator LoadNextScene(float delay = 0)
