@@ -573,7 +573,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2039523209765511659, guid: cc0d07ef0a01a0c4db893b3d9713ac24, type: 3}
       propertyPath: Hp
-      value: 100
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2039523209765511659, guid: cc0d07ef0a01a0c4db893b3d9713ac24, type: 3}
       propertyPath: Actions.Array.size
