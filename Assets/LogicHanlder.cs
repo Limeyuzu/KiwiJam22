@@ -118,9 +118,13 @@ public class LogicHanlder : MonoBehaviour
         Destroy(aa);
         Destroy(bb);
 
-            button1.SetActive(false);
-            button2.SetActive(false);
+        for (int i = 0; i < Party.transform.childCount; ++i)
+        {
+            Party.transform.GetChild(i).gameObject.SetActive(true); // or false
+        }
+
     }
+
 
     void seedNewCharacters()
     {
