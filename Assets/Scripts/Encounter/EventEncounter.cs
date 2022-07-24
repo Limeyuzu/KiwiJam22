@@ -20,6 +20,8 @@ namespace AdventureTogether
             yield return EventLocation.Action.Act(EventLocation, Party, null, BattleText);
 
             yield return new WaitForSecondsRealtime(3);
+
+            SceneLoader.LoadBattleScene();
         }
     }
 }

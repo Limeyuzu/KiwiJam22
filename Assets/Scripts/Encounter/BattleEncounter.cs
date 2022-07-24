@@ -35,10 +35,22 @@ namespace AdventureTogether
             if (Enemy.IsDefeated())
             {
                 yield return BattleText.AddBattleText($"You continue on your journey.", 3.0f);
+                var gameState = FindObjectOfType<GameState>();
+                gameState.BattlesDefeated++;
+
+                if (gameState.BattlesDefeated > 3)
+                {
+                    SceneLoader.LoadWinGameScene();
+                } 
+                else
+                {
+                    SceneLoader.LoadEventScene();
+                }
             } 
             else if (Party.IsDefeated())
             {
                 yield return BattleText.AddBattleText($"The party has fallen...", 3.0f);
+                SceneLoader.LoadGameOverScene();
             }
         }
 

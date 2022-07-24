@@ -16,6 +16,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
     }
 
+    public static void LoadGameOverScene()
+    {
+        SceneManager.LoadScene("GameOverScene");
+    }
+
     public static void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -30,6 +35,11 @@ public class SceneLoader : MonoBehaviour
     public static void LoadEventScene()
     {
         SceneManager.LoadScene("EventScene");
+    }
+
+    public static void LoadWinGameScene()
+    {
+        SceneManager.LoadScene("WinGameScene");
     }
 
     public static IEnumerator LoadNextScene(float delay = 0)
