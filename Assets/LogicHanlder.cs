@@ -131,18 +131,21 @@ public class LogicHanlder : MonoBehaviour
 
         int Rand1 = Random.Range(0, CHolder.Count);
         int Rand2 = Random.Range(0, CHolder.Count);
+
         
         while (Rand1 == Rand2)
         {
             Rand2 = Random.Range(0, CHolder.Count);
         }
+        Debug.Log(Rand1);
+        Debug.Log(Rand2);
 
 
         GameObject LeftCharacterHolder = CHolder[Rand1];
         GameObject RightCharacterHolder = CHolder[Rand2];
 
-        //CHolder.RemoveAt(Rand1);
-        //CHolder.RemoveAt(Rand2);
+        CHolder.RemoveAt(Rand1);
+        CHolder.RemoveAt(Rand2);
 
 
 
@@ -157,7 +160,7 @@ public class LogicHanlder : MonoBehaviour
         B.transform.position = new Vector3(2.5f, 0);
         B.transform.parent = Party.transform;
 
-        Char1Text.SetText(LeftCharacterHolder.GetComponent<Character>().Name);
+        Char1Text.SetText(LeftCharacterHolder.GetComponent<Character>().Name + "\n Traits:" + LeftCharacterHolder.GetComponent<Character>().Traits);
         Char2Text.SetText(RightCharacterHolder.GetComponent<Character>().Name);
 
      }
